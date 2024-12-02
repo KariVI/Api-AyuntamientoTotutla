@@ -42,7 +42,7 @@ router.put("/:id", async (req, res) => {
 router.delete("/:id", async (req, res) => {
     const { id } = req.params;
     try {
-        const docRef = db.collection("tuColeccion").doc(id);
+        const docRef = db.collection("archivos").doc(id);
         await docRef.delete();
         res.status(200).json({ message: "Documento eliminado correctamente" });
     } catch (error) {
